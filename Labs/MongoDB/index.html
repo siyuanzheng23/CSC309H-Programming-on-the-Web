@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Giller Long List</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="scripts/showBooks.js"></script>
+</head>
+<body>
+    <h1>Giller Book Prize Long List</h1>
+
+    <ol id="booksList"></ol>
+
+    <form id="add" method="post">
+        <h2>Add book</h2>
+        <div class="form-fields">
+            <label>
+                <span class="label">Author: </span>
+                <input type="text" name="author"></input>
+                <!-- name attribute is useful for getting the req.body.text  -->
+            </label>
+
+            <label>
+                <span class="label">Title: </span>
+                <input type="text" name="title"></input>
+            </label>
+
+            <label>
+                <span class="label">ISBN: </span>
+                <input type="text" name="isbn"></input>
+            </label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

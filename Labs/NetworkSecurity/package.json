@@ -1,0 +1,28 @@
+{
+  "name": "csc309-lab8-fall16",
+  "version": "1.0.0",
+  "description": "Security Testing Vulnerable App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"No Tests\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "csc309",
+    "lab8",
+    "security"
+  ],
+  "engines": {
+    "node": "4.4.3"
+  },
+  "author": "csc309-tas",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "nunjucks": "^3.0.0",
+    "path": "^0.12.7",
+    "sqlite3": "^3.1.8"
+  }
+}

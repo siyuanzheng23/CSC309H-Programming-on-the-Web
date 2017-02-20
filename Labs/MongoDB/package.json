@@ -1,0 +1,13 @@
+{
+  "name": "lab6",
+  "description": "Book List Application",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11",
+    "mongoose": "^4.6.5",
+    "nodemon": "^1.11.0"
+  }
+}

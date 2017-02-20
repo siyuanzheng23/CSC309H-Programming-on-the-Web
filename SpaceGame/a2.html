@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+        <script type="text/javascript" src="assets/jquery-2.2.4.min.js" defer></script><!-- jQuery should be first -->
+        <script type="text/javascript" src="assets/script.js" defer></script>
+		<title>Solar Game</title>
+	</head>
+	
+	<body>
+		<section id="transition_page" class='show'>
+			<p id="page_title" class="show">Solar Game</p>
+			<p id='level_score' class="hide">Score:<br>0</p>
+			<section id="high_score_holder" class='show'>
+				<p>High Score:</p>
+				<p>0</p>
+			</section>
+			<button id="page_button" class='show' onclick='switchScene()'>START</button>
+		</section>
+		
+		<section id="game_page" class='hide'>
+			<section id="overlay" class='hide'>
+				<p>Pause</p>
+			</section>
+			
+			<section id="info_bar">
+				<p id="level">Level# 1</p>
+				<p id="score">Score: 200</p>
+				<button id='pause_button' onclick='pause()'>Pause</button>
+				<p id='timer'>60 seconds</p>
+			</section>
+			
+			<canvas id="view_port" width="1000" height="640">
+				<!-- !!!Draw!!! -->
+			</canvas>
+		</section>
+	</body>
+</html>

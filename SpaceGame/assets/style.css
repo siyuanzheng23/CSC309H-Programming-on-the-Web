@@ -1,0 +1,95 @@
+/* by ID */
+/* Start Page */
+#transition_page {
+	text-align:center;
+}
+
+#transition_page > .show {
+	border: 1px dashed black;
+	display: inline-block;
+	margin: 10px 30%;
+	min-width: 100px;
+	padding: 10px 40px;
+}
+
+#page_title.show {
+	font-weight: bold;
+	font-size: 250%;
+	color: #EEFF00;
+	background-color: #1F00BE;
+	border-color: #EEFF00;
+	padding: 20px 80px;
+}
+
+#page_button.show {
+	border-style: solid;
+	background-color: white;
+}
+
+#level_score {
+	font-size: 120%;
+}
+
+/* Game Page */
+#game_page {
+	text-align: center;
+	position: relative;
+}
+
+#info_bar {
+	height: 40px;
+	width: 1000px;
+	background-color: #CCFEA2;
+	display: -webkit-inline-flex;
+	border: 1px solid black;
+}
+
+#info_bar > * {
+	/* let flexbox adjust the margin */
+	margin: auto;
+	font-weight: bold;
+}
+
+#view_port {
+	background-color: #7BADFF;
+	height: 640px;
+	width: 1000px;
+	display: inline-block;
+	border: 1px solid black;
+}
+
+#score {
+	width: 60%;
+	font-size: 130%;
+}
+
+#level {
+	width: 6%;
+	margin-right: 10%;
+}
+
+#overlay {
+	z-index: 2;
+	position: absolute;
+	background: black;
+	opacity: 0.7;
+	width: 1000px;
+	height: 640px;
+	top: 42px;
+	text-align: center;
+}
+
+#overlay p {
+	color: white;
+	font-size: 400%;
+	margin-top: 300px;
+}
+
+/* by class */
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}

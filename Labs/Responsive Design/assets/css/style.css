@@ -1,0 +1,179 @@
+/* E.g. Style Guide: https://google.github.io/styleguide/htmlcssguide.xml */
+
+
+/**
+ * Your main styles at the top apply to the smallest screen/viewport,
+ * e.g. width of 320px, or anything less than the following breakpoint.
+ * Ordering the breakpoints in this way, smallest to biggest, is loosely
+ * called a "mobile-first" approach to responsive design. The CSS targets
+ * the "mobile" device sizes first, then overridden on larger devices.
+ */
+
+* { 
+    box-sizing: border-box;
+	width:98%;
+    text-align:center;
+    display: block;
+    color:white;
+    width:98%;
+    margin-left:4px;
+}
+
+header span.img {
+    padding-top:none;
+    margin-top:none;
+    border-top:none;
+    display: block;
+    background:#00ffff;
+    text-align:center;
+    height:80px;
+    line-height:70px;
+}
+
+#menu{
+    background-color:lightgrey;
+    height:120px;
+    padding-right:50px;
+    padding-top:20px;
+    margin-top:5px;
+}
+
+section article{
+    background-color:#003399;
+    height:80px;
+    line-height:70px;
+    margin-top:0px;
+}
+
+section article p{
+    margin-top:5px;
+}
+
+footer{
+    background-color:lightgrey;
+    height:65px;
+    padding-top:6px;
+    margin-top:5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+/**
+ * This is our first breakpoint!
+ * If you increase the viewport (your browser window) size from 479px to 480px,
+ * (e.g. depending on the mobile phone size, perhaps changing the orientation
+ * of the phone to horizontal will trigger this breakpoint).
+ * Note: there is no "upper limit" in this breakpoint, so any styles in other
+ * following breakpoints after this could override this one.
+ */
+
+/* The and (min-width: 480px) defines the minimum width to target. */
+@media screen and (min-width: 480px) {
+
+    /**
+     * Tip! Since we need floating columns, we can apply the floats here
+     * and also the self-clearing container trick.
+     * Incase you're wondering `::after` is a pseudo element:
+     * http://www.w3schools.com/CSSref/sel_after.asp
+     */
+    section::after {
+        clear: both;
+        content: '';
+        display: table;
+        height: 0;
+        visibility: hidden;
+    }
+
+    section article {
+        float: left;
+        width:48.5%;
+        margin-top:5px;
+    }
+
+    #menu{
+        height:70px;
+        padding-right:0px;
+        padding-top:0px;
+    }
+
+    #menu ul{
+        padding-left:0px;
+        margin-top:5px;
+        padding-top:5px;
+    }
+
+    footer{
+        height:40px;
+        padding-top:0px;
+    }
+
+    footer p{
+        margin-top:0px;
+        padding-top:10px;
+    }
+
+    /* Re-style here... */
+    
+}
+
+
+/* We're skipping a lot of possible breakpoints here ... */
+
+
+/**
+ * At 1280px viewport width, any styles declared in this breakpoint will
+ * override previous styles with matching signatures.
+ */
+
+@media screen and (min-width: 1280px) {
+    /* Re-style here, if necessary! You may want to use the same technique
+	 * used in section::after for the header*/
+
+     body{
+        margin-bottom:0px;
+        font-size:200%;
+     }
+
+     header span.img{
+        width:25%;
+        margin-right:0px;
+        padding-right:0px;
+        float:left;
+        height:100px;
+        padding-top:18px;
+     }
+
+     #menu{
+        width:72%;
+        margin-left:10px;
+        margin-right:0px;
+        height:100px;
+        float:left;
+     }
+
+     #menu ul li{
+        width:30%;
+        margin-right:0px;
+        float:left;
+        padding-top:30px;
+     }
+
+     section article{
+        height:410px;
+        padding-right:0px;
+     }
+
+     footer{
+        height:70px;
+     }
+
+     footer p{
+        padding-top:10px;
+     }
+
+
+}

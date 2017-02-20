@@ -1,0 +1,85 @@
+body {
+    font: 400 16px/1.5 'Helvetica', 'Arial', sans-serif;
+    margin: 0 auto;
+    max-width: 50em;
+    width: 100%;
+    /*background: #c3e0ff;*/
+}
+
+#booksList button {
+    margin-left: 1em;
+}
+
+.form-fields {
+    display: table;
+    width: 100%;
+}
+
+    .form-fields label {
+        display: table-row;
+        position: relative;
+    }
+
+    .form-fields .label,
+    .form-fields input {
+        display: table-cell;
+    }
+
+    .form-fields .label {
+        padding: 1rem 1rem 1rem 0;
+    }
+
+    .form-fields input {
+        width: 97%;
+        padding: 0.5rem;
+        border-radius: 4px;
+    }
+
+form {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 0.25em;
+    padding: 1.5rem;
+}
+
+    form h2 {
+        margin-top: 0;
+    }
+
+input {
+    border: 1px solid #ccc;
+    font: inherit;
+}
+
+button,
+input[type='button'] {
+    color: white;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    background-color: #3c97d8;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+}
+
+    button:hover,
+    input[type='button']:hover {
+        background-color: #017bd2;
+    }
+
+    button:active,
+    input[type='button']:active {
+        background-color: #23d030;
+        border-color: rgba(255, 255, 255, 0);
+    }
+
+input[type='text'] {
+    transition: box-shadow 0.2s;
+}
+
+    input[type='text']:hover {
+        box-shadow: inset 0px 0px 9px #64a2ff;
+    }

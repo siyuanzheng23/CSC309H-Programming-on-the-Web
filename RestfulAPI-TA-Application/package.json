@@ -1,0 +1,11 @@
+{
+  "name": "a2-zhengsi5",
+  "description": "RESTful API",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0"
+  }
+}

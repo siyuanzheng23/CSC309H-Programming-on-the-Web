@@ -1,0 +1,79 @@
+table{
+	width:100%;
+	text-align:center;
+	border:solid black;
+}
+
+body{
+	margin: 10px;
+    background-color: #eee;
+    font-family: sans-serif;
+}
+
+
+#appliable{
+	width:80%;
+	display:block;
+}
+
+
+
+.courseTitle{
+	font-size:100%;
+}
+
+#shiftRight1{
+	margin-left:3%;
+}
+
+#deleteAnApplicant{
+	margin-left:3%;
+}
+
+.smallTitle{
+	font-size:100%;
+}
+
+#postFamilyName{
+	margin-left:2%;
+}
+
+#postStatus{
+	margin-left:2%;
+}
+
+#button1{
+	margin-bottom:1%;
+}
+
+#button2{
+	margin-bottom:1%;
+}
+
+#button3{
+	margin-bottom:1%;
+}
+
+#button4{
+	margin-bottom:1%;
+}
+
+#button5{
+	margin-bottom:1%;
+}
+
+#button6{
+	margin-bottom:1%;
+}
+
+#button7{
+	margin-bottom:3%;
+}
+
+.courseLabel{
+	margin-right:5%;
+}
+
+.middlelabel{
+	margin-left:5%;
+}

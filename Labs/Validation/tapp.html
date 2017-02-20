@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TA Profile Information</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>TA Application Form</h1>
+            <h2>Personal Information</h2>
+        </header>
+
+        <form action="/signup" method="post">
+            <!-- TAs are identifed by their student number. -->
+            <div class="form_element">
+                <label id="stunumField">
+                    <span class="label">Student Number:</span><br>
+                    <!--
+                    TODO:
+                    Create a required text input here with the name stunum.
+                    Use the HTML5 validation `pattern` attribute to validate
+                    a 9 or 10-digit number.
+                    -->
+                    <input name="stunum" type="text" pattern="\d{9,10}"><br>
+
+                    <span class="error"><%- errors.error_stunum %></span>
+                </label>
+            </div>
+
+            <!--
+            The given and family names do not need an special validation
+            beyond ensuring that they are filled in.  Use the HTML5
+            `required` attribute to force the user to enter something in
+            these fields.
+            -->
+            <div class="form_element">
+                <label id="givenField">
+                    <span class="label">Given Name:</span>
+                    <!--
+                    TODO:
+                    Create a required text input with name "givenname".
+                    -->
+                    <input name="givenname" type="text"><br>
+
+
+                </label>
+            </div>
+            <div class="form_element">
+                <label id="familyField">
+                    <span class="label">Family Name:</span>
+                    <!--
+                    TODO:
+                    Create a required text input with name "familyname" .
+                    -->
+                    <input name="familyname" type="text"><br>
+                </label>
+            </div>
+
+            <!--
+            Use HTML5 validation to ensure a 10-digit phone number is
+            entered.  You will need to come up with a regular expression
+            that permits the following valid phone numbers: 4167778888,
+            (416)777-8888, (416)7778888, 416-777-8888.  Try not to annoy
+            your users by forcing them into typing a phone number in a
+            strict format.
+            -->
+            <div class="form_element">
+                <label id="phoneField">
+                    <span class="label">Phone Number:</span>
+                    <!--
+                    TODO: Create a required text input here with name "phone".
+                    Use the HTML5 validation `pattern` attribute to validate.
+                    -->
+                    <input name="phone" type="tel" pattern="\(?\d{3}[\-)]?\d{3}[\-]?\d{4}"><br>
+                    <span class="error"><%- errors.error_phone %></span>
+                </label>
+            </div>
+
+            <!--
+            Mozilla Firefox doesn't support the `date` type, Chrome does.
+            Date format is "yyyy-mm-dd".
+            -->
+            <div class="form_element">
+                <label id="birthdayField">
+                    <span class="label">Birthday:</span>
+                    <!--
+                    TODO: Create a required text input here with name "birthday"
+                    and the type="text".
+                    Date format is yyyy-mm-dd. Use the `placeholder` attribute
+                    to tell the user.
+                    Note for myself:   "\d{4}[\-]" instead of "\d{4}\-"" -->   
+                    <input name="birthday" type="text" placeholder="yyyy-mm-dd" pattern="\d{4}[\-]\d{2}[\-]\d{2}"><br>
+
+                    <span class="error"><%- errors.error_birthday %></span>
+                </label>
+            </div>
+
+            <div class="form_element">
+                <label for="info">Other information relevant to your application:</label>
+                <textarea name="info" rows="6" cols="50"></textarea>
+            </div>
+
+            <div class="form_element">
+                <input id="SubmitButton" type="submit" value="Submit">
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="scripts/routes.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TA Applications</title>
+</head>
+
+<body>
+<div id='button1'>
+	<input type='button' name='getAllApp' id='getAllApp' value='Retrieve all applicants' />
+</div>
+<br>
+
+<div id='button2'>
+	<span class='label'>Retrieve applicants by status: </span>
+	<select name='status' id='selectStatus' required='required'>
+ 		<option value='Undergrad' class='option'>Undergrad</option>
+ 		<option value='MSc' class='option'>MSc</option>
+ 		<option value='PhD' class='option'>PhD</option>
+ 		<option value='MScAC' class='option'>MScAC</option>
+ 		<option value='MEng' class='option'>MEng</option>
+	</select>
+	<input type='button' name='postStatus' id='postStatus' value='Retrieve' />
+</div>
+<br>
+
+<div id='button3'>
+	<span class='label'>Enter a family name to retrieve applicant(s)(case sensitive) : </span>
+	<input name='familyName' type='text' id='familyName'/>
+	<input type='button' name='postFamilyName' id='postFamilyName' value='Retrieve' />
+</div>
+<br>
+
+<div id='button4'>
+<span class = 'label' id='beginApplication'>Apply here : </span><br>
+<span class ='appliable' id='appliable'>(Offering: </span>
+<form id='submit'>
+	<span class='label'>Student #: </span>
+	<input type='text' name='stunum' id='AppstudentNum' required /><br>
+	<span class='label'>First Name: </span>
+	<input type='text' name='givenname' id='AppGivenName' required /> <br>
+	<span class='label'>Last Name: </span>
+	<input type='text' name='familyname' id='AppLastName' required /><br>
+	<span class='label'>Status: </span>
+	<select name='status' id='AppselectStatus' required='required'>
+ 		<option value='Undergrad' class='option'>Undergrad</option>
+ 		<option value='MSc' class='option'>MSc</option>
+ 		<option value='PhD' class='option'>PhD</option>
+ 		<option value='MScAC' class='option'>MScAC</option>
+ 		<option value='MEng' class='option'>MEng</option>
+	</select><br>
+	<span class='label'>Year: </span>
+	<input type='number' name='year' id="AppYear" required /><br>
+	<span class='label'>Course code: </span>
+	<input type='text' name='courses[0][code]' id='Course1' placeholder='CSC###' required />
+	<span class='middlelabel'>Rank: </span>
+	<select name='courses[0][rank]' id='courseRank1' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+	</select>
+	<span class='middlelabel'>Year of Experience</span>
+	<select name='courses[0][experience]' id='AppExpNum1' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+ 		<option value='7' class='option'>7</option>
+ 		<option value='8' class='option'>8</option>
+	</select><br>
+
+	<span class='label'>Course code: </span>
+	<input type='text' name='courses[1][code]' placeholder='CSC###(Optional)' id='Course2'>
+	<span class='middlelabel'>Rank: </span>
+	<select name='courses[1][rank]' id='courseRank2' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+	</select>
+	<span class='middlelabel'>Year of Experience</span>
+	<select name='courses[1][experience]' id='AppExpNum2' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+ 		<option value='7' class='option'>7</option>
+ 		<option value='8' class='option'>8</option>
+	</select><br>
+
+	<span class='label'>Course code: </span>
+	<input type='text' name='courses[2][code]' placeholder='CSC###(Optional)' id='Course3'>
+	<span class='middlelabel'>Rank: </span>
+	<select name='courses[2][rank]' id='courseRank3' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+	</select>
+	<span class='middlelabel'>Year of Experience</span>
+	<select name='courses[2][experience]' id='AppExpNum3' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+ 		<option value='7' class='option'>7</option>
+ 		<option value='8' class='option'>8</option>
+	</select><br>
+
+	<span class='label'>Course code: </span>
+	<input type='text' name='courses[3][code]' placeholder='CSC###(Optional)' id='Course4'>
+	<span class='middlelabel'>Rank: </span>
+	<select name='courses[3][rank]' id='courseRank4' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+	</select>
+	<span class='middlelabel'>Year of Experience</span>
+	<select name='courses[3][experience]' id='AppExpNum4' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+ 		<option value='7' class='option'>7</option>
+ 		<option value='8' class='option'>8</option>
+	</select><br>
+
+	<span class='label'>Course code: </span>
+	<input type='text' name='courses[4][code]' placeholder='CSC###(Optional)'  id='Course5'>
+	<span class='middlelabel'>Rank: </span>
+	<select name='courses[4][rank]' id='courseRank5' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+	</select>
+	<span class='middlelabel'>Year of Experience</span>
+	<select name='courses[4][experience]' id='AppExpNum5' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+ 		<option value='7' class='option'>7</option>
+ 		<option value='8' class='option'>8</option>
+	</select><br>
+
+	<span class='label'>Course code: </span>
+	<input type='text' name='courses[5][code]'  placeholder='CSC###(Optional)' id='Course6'>
+	<span class='middlelabel'>Rank: </span>
+	<select name='courses[5][rank]' id='courseRank6' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+	</select>
+	<span class='middlelabel'>Year of Experience</span>
+	<select name='courses[5][experience]' id='AppExpNum6' required='required'>
+ 		<option value='1' class='option'>1</option>
+ 		<option value='2' class='option'>2</option>
+ 		<option value='3' class='option'>3</option>
+ 		<option value='4' class='option'>4</option>
+ 		<option value='5' class='option'>5</option>
+ 		<option value='6' class='option'>6</option>
+ 		<option value='7' class='option'>7</option>
+ 		<option value='8' class='option'>8</option>
+	</select><br>
+	<input type='submit' name='addAnApplicant' id='addAnApplicant' value='Submit' />
+</form>
+</div>
+<br>
+
+
+
+<div id='button5'>
+<form id='delete'>
+    <span class='label'>ONLY enter one : </span><br>
+    <span class='label'>Student #: </span>
+    <input type='text' name='deleteNum' id='deleteNum'>
+    <span class='label' id='shiftRight1'>Family Name(case sensitive) : </span>
+    <input type='text' name='deleteName' id='deleteName'>
+	<input type='button' name='deleteAnApplicant' id='deleteAnApplicant' value='Delete' />
+</form>
+</div>
+<br>
+
+<div id='button6'>
+	<input type='button' name='getAllAppOfAllCourses' id='getAllAppOfAllCourses' value='Retrieve applicants of each course' />
+</div>
+<br>
+
+<div id='button7'>
+	<span class='label'>Enter a valid course code to retrieve applicants(case sensitive) : </span>
+	<input name='courseId' type='text' id='courseId' placeholder='CSC###' />
+	<input type='button' name='getAppByID' id='getAppByID' value='Retrieve' />
+</div>
+
+<div id='display'></div>
+
+</body>
+</html>

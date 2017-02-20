@@ -1,0 +1,281 @@
+body{
+	background-color:DarkGrey;  /* to set the background color grey*/
+	color:black;               /*to set the color of font black*/
+	margin-top:none;			/*delete the margin at the top of the website*/
+	padding:0;		
+	margin:0;				
+	border-top:solid black;					
+	font-family:Lucida Console;			/*change the font-style*/
+}
+
+body p{
+	font-size:130%;   /* to enlarge the font-size*/
+}
+
+#header{
+	background-color:black;
+	color:white;
+	border-top:solid black;
+	border-bottom:solid black;
+	margin-top:0cm;
+	margin-bottom:0cm;
+	text-decoration:none; /* to cancel the underline of the header*/
+}
+
+
+#pro{
+	padding-left:100px;  /* shift the profile picture of the professor to the right*/
+}
+
+ol li{      
+	padding-left:60px;  /* shift right the content of textbooks */
+	font-size:130%;   /* make the font larger*/
+}
+
+ol{
+	list-style-type:none;   /* delete the number orders of the list*/
+}
+
+
+
+/* here is to shift all the content to the right by 100px*/
+
+h1{						
+	padding-left:100px;
+	color:darkcyan;
+	text-decoration:underline;
+}
+
+h2{
+	padding-left:100px;
+}
+
+p{
+	padding-left:100px;
+}
+
+table{
+	margin-left:100px;
+}
+
+
+
+/* specify the style of the navigation bar*/
+#nav ul{
+	list-style-type:none;  /* delete the dots*/
+	margin:0;
+	padding:0;
+	background-color:black;  /* specify the background color of the bar*/
+	opacity: .5;    /* to make the bar a little transparent*/
+}
+
+#nav ul li{
+	float:left; /* to make the nav bar horizontal */
+	width:178px; 
+}
+
+#nav li a{
+	display:block;  /* to make the block , not only the words click-able*/
+	color:darkcyan;
+	text-align:center;  /* to center the words within each block*/
+	padding:14px 16px;
+	text-decoration:none;
+	font-weight:bold;
+	font-size:150%;  /*enlarge the font-size of the navigation bar*/
+
+}
+
+#nav li a:hover{/* to style the link when it has been pointed to by the mouse*/
+	color:white;
+}
+
+
+
+
+
+#content {
+    width:100%;
+    float:left;
+    padding:0px 0px 0px 0px; 
+    margin:0cm 0cm 0cm 0cm;
+}
+
+/* to make the width of the table wider*/
+#content table{
+	width:1000px;
+}
+
+/* to add border of the table and set its color black*/
+#content table,th,td{
+	border:1px solid black;
+	font-size:120%;
+}
+
+/* to make the navigation bar always be at the top of the website*/
+#nav ul{
+	position:fixed;
+	overflow:auto;
+}
+
+/*to center the footer*/
+#footer{
+	text-align:center;
+}
+
+/*responsive design starts here */
+@media only screen and (max-width:1024px){
+	#nav ul li{
+		width:100%; 
+	}
+	#content{
+		width:100%;
+	}
+	#content table{
+		width:100%;
+	}
+	#nav ul li{
+		float:left; /* to make the nav bar horizontal */
+		width:14.1%; 
+	}
+	#nav li a{
+		font-size:100%;
+
+	}
+
+	#pro{
+		padding-left:0px;
+	}
+	ol li{
+		padding-left:0px;
+	}
+	h1{
+		padding-left:0px;
+	}
+	h2{
+		padding-left:0px;
+	}
+	p{
+		padding-left:0px;
+	}
+	table{
+		margin-left:0px;
+	}
+
+}
+
+
+
+@media only screen and (max-width:768px){
+	#nav ul li{
+		width:100%; 
+	}
+	#content{
+		width:100%;
+	}
+	#content table{
+		width:100%;
+	}
+	#nav ul li{
+		width:100%;
+	}
+	#pro{
+		padding-left:0px;
+	}
+	ol li{
+		padding-left:0px;
+	}
+	h1{
+		padding-left:0px;
+	}
+	h2{
+		padding-left:0px;
+	}
+	p{
+		padding-left:0px;
+	}
+	table{
+		margin-left:0px;
+	}
+	#header{
+		padding-top:200px; /* shift the header below the navigation bar*/
+	}
+
+}
+
+@media only screen and (max-width:480px){
+	#nav ul li{
+		width:100%; 
+	}
+	#content{
+		width:100%;
+	}
+	#content table{
+		width:100%;
+	}
+	#nav ul li{
+		width:100%;
+	}
+	#pro{
+		padding-left:0px;
+	}
+	ol li{
+		padding-left:0px;
+	}
+	h1{
+		padding-left:0px;
+	}
+	h2{
+		padding-left:0px;
+	}
+	p{
+		padding-left:0px;
+	}
+	table{
+		margin-left:0px;
+	}
+	#header{
+		padding-top:200px; /* shift the header below the navigation bar*/
+	}
+
+
+}
+
+@media only screen and (max-width:320px){
+	#nav ul li{
+		width:100%; 
+	}
+	#content{
+		width:100%;
+	}
+	#content table{
+		width:100%;
+	}
+	#nav ul li{
+		width:100%;
+	}
+	#pro{
+		padding-left:0px;
+	}
+	ol li{
+		padding-left:0px;
+	}
+	h1{
+		padding-left:0px;
+	}
+	h2{
+		padding-left:0px;
+	}
+	p{
+		padding-left:0px;
+	}
+	table{
+		margin-left:0px;
+	}
+	#header{
+		padding-top:200px; /* shift the header below the navigation bar*/
+	}
+
+
+}
+
+
