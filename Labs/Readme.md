@@ -1,1 +1,1 @@
-Given starter codes, only core codes which are relatively small portion of each lab were written by students.
+For each lab, starter codes were given, only core codes were written by students.
