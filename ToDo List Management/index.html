@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do List</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<h1 id="title">To-Do List Management</div>
+
+	<div ng-app="myApp" ng-controller="ctrl">
+
+		<div id="leftPanel">
+			<h2 class="subTitle">Adding new task to your To-Do list</h2>
+			<form>
+			Title:<br>
+			<input ng-model="newTitle" type="text" required><br>
+			Details:<br>
+			<textarea id="detail" ng-model="newDetail" type= "text" rows="15" cols="70" required></textarea><br>
+			Date: <br>
+			<input ng-model="newDate" type="date" placeholder = "yyyy-mm-dd" required><br><br>
+			<input type="submit" ng-click="addItem()" value="Add">
+			<br>
+			<div id="errMsg">{{error}}</div>
+			</form>
+			<br><br>
+		</div>
+
+		<div id="rightPanel">
+			<div class="rightPanelTitle"> Hide tasks that are done: <input type="checkbox" ng-model="hideDone"><br>
+			</div>
+			<ol class="item">
+				<li ng-repeat="x in list | orderBy: '-date'" ng-hide = "hideDone && x.isDone" ng-class="x.isDone ? 'yellow' : 'green' " }}>
+				<div>
+					<div class="titleDisplay">
+					{{x.title}}
+					</div>
+					<div class="dateDiaply">
+					{{x.date}}
+					</div>
+				</div>
+				<button ng-click="hideOthers(x.id)">show detail</button>
+				<input type="checkbox" ng-model="x.isDone">
+				{{x.isDone ? "Status: done" : "Status: undone"}}<br>
+				<div class="detailsDisplay" ng-show="x.show">
+				{{x.detail}}
+				</div>
+				<button ng-click="removeItem(x.id)">Delete task</button>
+				</li>
+			</ol>
+
+		</div>
+	</div>
+
+
+</body>
