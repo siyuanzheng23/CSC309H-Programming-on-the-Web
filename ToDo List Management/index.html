@@ -33,12 +33,12 @@
 			<div class="rightPanelTitle"> Hide tasks that are done: <input type="checkbox" ng-model="hideDone"><br>
 			</div>
 			<ol class="item">
-				<li ng-repeat="x in list | orderBy: '-date'" ng-hide = "hideDone && x.isDone" ng-class="x.isDone ? 'yellow' : 'green' " }}>
+				<li ng-repeat="x in list | orderBy: '-date'" ng-hide = "hideDone && x.isDone" ng-class="x.isDone ? 'yellow' : 'green'">
 				<div>
 					<div class="titleDisplay">
 					{{x.title}}
 					</div>
-					<div class="dateDiaply">
+					<div class="dateDisplay">
 					{{x.date}}
 					</div>
 				</div>
